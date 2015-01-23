@@ -3,9 +3,9 @@
 ###   of "x" from scratch. Please note, in the script below, you may need to change "directory" argument 
 ###   in the source(directory) commamd, depending on the location of cachematrix.R in your local directory.
 
-# rm(list = ls())
-# source("cachematrix.R")
-# x<-matrix(1:4, nrow=2, ncol=2)
-# xCM<-makeCacheMatrix()
-# xCM$set(x)
-# cacheSolve(xCM)
+
+source("~/uwazac/ProgrammingAssignment2/cachematrix.R")
+x<-matrix(1:4, nrow=2, ncol=2)
+xCM<-makeCacheMatrix()
+xCM$set(x)
+cacheSolve(xCM)
