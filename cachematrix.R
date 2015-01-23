@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## A set of example scripts and explanations for executing the functions can be found below the function definitions.
 
-## A function defining a set of methods and variables that are available in the global environment.
+## makeCacheMatris is a function defining a set of methods and variables that are made available in 
+## the global environment.
 
 makeCacheMatrix <- function (x = matrix()) {
   m <- NULL
@@ -35,3 +35,28 @@ cacheSolve <- function(x, ...) {
   x$setInverse(m)
   m
 }
+
+###   This first script creates the variable "m" in environment and caches the value of the inverse of the 
+###   matrix "x" in "m". It then uses cacheSolve to return the value of the inverse matrix "x". Please note, 
+###   in the script below, you may need to change "directory" argument in the source(directory) commamd, 
+###   depending on the location of cachematrix.R in your local directory.
+
+# rm(list = ls())
+# source("cachematrix.R")
+# x<-matrix(1:4, nrow=2, ncol=2)
+# xCM<-makeCacheMatrix(x)
+# xInverse<-solve(x)
+# xCM$setInverse(xInverse)
+# cacheSolve(xCM)
+
+###   This next script demonstrates an example where the inverse of matrix "x" has not already 
+###   been cached using makeCacheMatrix.R. As a result, cacheSolve.R calculates and returns the inverse 
+###   of "x" from scratch. Please note, in the script below, you may need to change "directory" argument 
+###   in the source(directory) commamd, depending on the location of cachematrix.R in your local directory.
+
+# rm(list = ls())
+# source("cachematrix.R")
+# x<-matrix(1:4, nrow=2, ncol=2)
+# xCM<-makeCacheMatrix()
+# xCM$set(x)
+# cacheSolve(xCM)
