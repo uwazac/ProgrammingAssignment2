@@ -20,7 +20,7 @@ list(set=set, get=get,
 
 
 ## This function calculates the inverse of a matrix, or not, depending on whether the matrix has already been
-## calculated cached in memory. The function returns the inverse of a matrix.
+## calculated and cached in memory. The function returns the inverse of a matrix.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
